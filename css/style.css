@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-transform: capitalize
+}
+
+:root {
+    --bak: #4c4a4dff
+}
+
+::placeholder {
+    color: #ccc;
+    transition: .5s;
+    font-size: 18px
+}
+
+:focus::placeholder {
+    opacity: 0
+}
+
+
+.container {
+    width: 554px;
+    height: 554px;
+    margin: 50px auto;
+    background: #b8b8b8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.container > div {
+    background: #0e0e0e;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center
+}
+
+input:focus + i {
+    color: red
+}
+
+
+
+div > h1 {
+    position: relative;
+    top: 20%;
+    color: #ccc;
+}
+
+form {
+    width: 65%;
+    background: var(--bak);
+    margin: auto;
+    padding: 30px;
+    position: relative;
+    top: 25%;
+    border-radius: 10px
+}
+
+form > div {
+    position: relative
+}
+
+form > div:first-of-type {
+    position: relative;
+    top: -12px
+}
+
+form > div:last-of-type {
+    position: relative;
+    top: 20px
+}
+
+form input[type="password"]::placeholder {
+    font-size: 17px;
+    letter-spacing: 3px
+}
+
+form > div i:first-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+form > div i:last-of-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+hr {
+    border: 0;
+    background: #ccc;
+    height: 2px;
+    position: relative;
+    top: 36px;
+    left: 0;
+}
+
+input {
+    background: transparent;
+    outline: none;
+    border: 0;
+    padding: 10px;
+
+}
+
+form > div i {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    font-size: 25px;
+    color: #ccc;
+}
+
+form button {
+    position: absolute;
+    bottom: -68px;
+    left: 0;
+    background: #19b959;
+    padding: 18px;
+    display: block;
+    width: 100%;
+    color: black;
+    margin: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 0;
+    color: #fff;
+    font-size: 20px
+}
