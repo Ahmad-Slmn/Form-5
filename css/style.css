@@ -2,137 +2,134 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: arial;
     text-transform: capitalize
 }
 
-:root {
-    --bak: #4c4a4dff
+body {
+    background: #b8b8b8ff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 ::placeholder {
     color: #ccc;
     transition: .5s;
-    font-size: 18px
+    font-size: 15px
 }
 
 :focus::placeholder {
     opacity: 0
 }
 
-
-.container {
-    width: 554px;
-    height: 554px;
-    margin: 50px auto;
-    background: #b8b8b8ff;
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
-.container > div {
-    background: #0e0e0e;
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    overflow: hidden;
-    text-align: center
-}
-
-input:focus + i {
-    color: red
-}
-
-
-
-div > h1 {
-    position: relative;
-    top: 20%;
-    color: #ccc;
-}
-
-form {
-    width: 65%;
-    background: var(--bak);
-    margin: auto;
-    padding: 30px;
-    position: relative;
-    top: 25%;
-    border-radius: 10px
-}
-
-form > div {
-    position: relative
-}
-
-form > div:first-of-type {
-    position: relative;
-    top: -12px
-}
-
-form > div:last-of-type {
-    position: relative;
-    top: 20px
-}
-
 form input[type="password"]::placeholder {
-    font-size: 17px;
     letter-spacing: 3px
 }
 
-form > div i:first-of-type {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: .5s;
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 10px;
+    background: #0e0e0e;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%
 }
 
-form > div i:last-of-type {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: .5s;
+form h2 {
+    color: #ccc;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 18px;
+    letter-spacing: 3px
 }
 
-hr {
-    border: 0;
-    background: #ccc;
-    height: 2px;
+form > div {
+    background: #4c4a4dff;
+    width: 70%;
+    height: 130px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     position: relative;
-    top: 36px;
-    left: 0;
+    border-radius: 6px
 }
 
-input {
-    background: transparent;
-    outline: none;
-    border: 0;
-    padding: 10px;
+form > div input {
 
+    padding: 16px 0;
+    background: none;
+    border: 0;
+    margin: 10px 0;
+    outline: none;
+    margin-right: 30px;
+    color: #ccc
+}
+
+input[type="text"]:focus ~ .fa-user {
+    
+    color: #19b959;
+
+}
+
+input[type="password"]:focus ~ .fa-lock {
+    
+    color: #19b959;
+
+}
+
+form hr {
+    border: 0;
+    width: 80%;
+    height: 1px;
+    border: 1px solid #b8b8b873
 }
 
 form > div i {
     position: absolute;
-    top: -12px;
-    left: 20px;
-    font-size: 25px;
+    top: 18px;
+    left: 34px;
     color: #ccc;
+    font-size: 20px
+}
+
+form > div i:last-of-type {
+    top: 84px
 }
 
 form button {
-    position: absolute;
-    bottom: -68px;
-    left: 0;
     background: #19b959;
-    padding: 18px;
-    display: block;
-    width: 100%;
-    color: black;
-    margin: auto;
-    border-radius: 10px;
-    cursor: pointer;
     border: 0;
-    color: #fff;
-    font-size: 20px
+    width: 70%;
+    padding: 15px;
+    color: #000000ad;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 6px
+}
+
+@media(max-width:480px) {
+
+    form {
+        max-width: 380px;
+        height: 380px
+    }
+
+    form > div input {
+        margin-right: -60px
+    }
+
+    h2 {
+        margin: 0 !important;
+        position: relative;
+        top: -20px
+    }
 }
