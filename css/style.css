@@ -119,8 +119,8 @@ form button {
 @media(max-width:480px) {
 
     form {
-        max-width: 380px;
-        height: 380px
+        max-width: 350px;
+        height: 350px
     }
 
     form > div input {
